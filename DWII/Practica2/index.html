@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio // Producción de Contenido</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Bootstrap 5 CSS -->
+    <link href="" rel="stylesheet">
+    <!-- Tu archivo personalizado de estilos (Debe ir abajo de Bootstrap) -->
+    <link rel="stylesheet" href="">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#menuPrincipal" data-bs-offset="70">
+
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand text-uppercase tracking-wider" href="#inicio">PORTAFOLIO // PROD. CONTENIDO</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fs-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="miperfil">Mi Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="habilidades">Mis Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="experiencia">Mi Experiencia</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Menú Lateral Desplegable (Offcanvas) -->
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="menuPrincipal" aria-labelledby="menuPrincipalLabel">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <h5 class="offcanvas-title" id="menuPrincipalLabel">NAVEGACIÓN</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5">
+                <li class="nav-item mb-2"><a class="nav-link" href="#inicio" data-bs-dismiss="offcanvas">Inicio</a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#miperfil" data-bs-dismiss="offcanvas">Mi Perfil</a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#habilidades" data-bs-dismiss="offcanvas">Mis Habilidades</a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#experiencia" data-bs-dismiss="offcanvas">Mi Experiencia</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 2: CARRUSEL (Sección de Inicio) -->
+    <section id="inicio" class="pt-5">
+        <div id="carruselPrincipal" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/');">
+                    <div class="carousel-caption d-flex flex-column h-100 justify-content-center align-items-center">
+                        <h1 class="display-3 fw-bold text-uppercase">Producción Audiovisual</h1>
+                        <p class="lead">Creación de contenido de alto impacto para entornos digitales modernos.</p>
+                        <a href="#miperfil" class="btn btn-outline-light btn-lg mt-3 px-4">Explorar</a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/');">
+                    <div class="carousel-caption d-flex flex-column h-100 justify-content-center align-items-center">
+                        <h1 class="display-3 fw-bold text-uppercase">Estrategia Digital</h1>
+                        <p class="lead">Llevando ideas desde el concepto conceptual hasta la ejecución en servidores.</p>
+                        <a href="#experiencia" class="btn btn-primary btn-lg mt-3 px-4">Ver Trayectoria</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselPrincipal" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselPrincipal" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: MI PERFIL -->
+    <section id="miperfil" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 text-center">
+                    <img src="" alt="Foto de perfil" class="img-fluid rounded-circle shadow-lg perfil-avatar">
+                </div>
+                <div class="col-lg-7">
+                    <h6 class="text-primary text-uppercase fw-bold tracking-wider mb-2">Sobre Mí</h6>
+                    <h2 class="display-5 fw-bold text-dark mb-4">Diseño, Estrategia y Desarrollo</h2>
+                    <p class="lead text-muted">Soy un especialista enfocado en la convergencia de la tecnología y la creación de contenidos. Combino metodologías sólidas con un enfoque analítico para desplegar soluciones de infraestructura y diseño multimedia.</p>
+                    <p class="text-secondary">Me apasiona optimizar flujos de trabajo técnicos, implementar plataformas integradas y estructurar interfaces interactivas que mejoren sustancialmente la experiencia del usuario final.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: MIS HABILIDADES -->
+    <section id="habilidades" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase fw-bold tracking-wider mb-2">Competencias</h6>
+                <h2 class="fw-bold text-dark">Qué puedo hacer</h2>
+            </div>
+            <div class="row g-4">
+                <!-- Habilidad 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm tarjeta-animada p-4">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold mb-3 text-dark">Gestión de Servidores</h4>
+                            <p class="card-text text-muted">Especializado en despliegues automatizados, control de infraestructura local mediante entornos virtualizados y monitoreo continuo de rendimiento.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Habilidad 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm tarjeta-animada p-4">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold mb-3 text-dark">Web Design II</h4>
+                            <p class="card-text text-muted">Construcción de layouts responsivos modernos basados en estándares semánticos puros, priorizando la aceleración por hardware mediante CSS eficiente.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Habilidad 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm tarjeta-animada p-4">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold mb-3 text-dark">Diseño Multimedia</h4>
+                            <p class="card-text text-muted">Conceptualización y producción de piezas gráficas y audiovisuales dinámicas orientadas a potenciar la comunicación y el branding corporativo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: MI EXPERIENCIA -->
+    <section id="experiencia" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase fw-bold tracking-wider mb-2">Trayectoria</h6>
+                <h2 class="fw-bold text-dark">Experiencia Profesional</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <!-- Línea de Tiempo (Timeline) -->
+                    <div class="timeline-container position-relative">
+                        <!-- Item 1 -->
+                        <div class="timeline-item mb-5 bg-white p-4 rounded shadow-sm border-start border-primary border-4">
+                            <span class="text-primary fw-bold d-block mb-1">Docente Universitario</span>
+                            <h4 class="fw-bold text-dark mb-2">Cursos de Diseño Web y Operaciones</h4>
+                            <p class="text-muted">Instrucción y desarrollo de planes curriculares avanzados para perfiles creativos y tecnológicos. Enfoque práctico en lenguajes front-end y lógica aplicada.</p>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="timeline-item mb-5 bg-white p-4 rounded shadow-sm border-start border-primary border-4">
+                            <span class="text-primary fw-bold d-block mb-1">Especialista en Implementaciones</span>
+                            <h4 class="fw-bold text-dark mb-2">Administración de Sistemas Integrados</h4>
+                            <p class="text-muted">Liderazgo técnico en la configuración, migración de datos y personalización de plataformas ERP robustas bajo flujos de trabajo ágiles de larga duración.</p>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="timeline-item bg-white p-4 rounded shadow-sm border-start border-primary border-4">
+                            <span class="text-primary fw-bold d-block mb-1">Consultoría Técnica</span>
+                            <h4 class="fw-bold text-dark mb-2">Despliegue y Virtualización Linux</h4>
+                            <p class="text-muted">Asesoramiento independiente en optimización de infraestructuras de red, túneles seguros privados y aprovisionamiento aislado en contenedores de alto rendimiento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: FOOTER -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start g-4">
+                <div class="col-md-6 col-lg-4 mx-auto">
+                    <h5 class="text-uppercase fw-bold mb-4 text-white-50 fs-6">Portafolio Profesional</h5>
+                    <p class="small text-secondary">Dedicado al desarrollo, la docencia y la implementación técnica de entornos digitales integrados de punta a punta.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 mx-auto">
+                    <h5 class="text-uppercase fw-bold mb-4 text-white-50 fs-6">Secciones</h5>
+                    <ul class="list-unstyled mb-0 footer-links small">
+                        <li class="mb-2"><a href="#inicio" class="text-secondary text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="#miperfil" class="text-secondary text-decoration-none">Mi Perfil</a></li>
+                        <li class="mb-2"><a href="#habilidades" class="text-secondary text-decoration-none">Habilidades</a></li>
+                        <li class="mb-2"><a href="#experiencia" class="text-secondary text-decoration-none">Experiencia</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4 mx-auto text-center text-lg-start">
+                    <h5 class="text-uppercase fw-bold mb-4 text-white-50 fs-6">Contacto</h5>
+                    <p class="small text-secondary mb-2">Ciudad Apodaca, Nuevo León, México</p>
+                    <p class="small text-secondary">info@tuportafolio.com</p>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-12 text-center">
+                    <p class="small text-secondary mb-0">&copy; 2026 Todos los derechos reservados. Diseñado con Bootstrap.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS (Requerido al final para el funcionamiento de los componentes) -->
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>

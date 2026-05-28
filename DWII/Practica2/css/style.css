@@ -1,0 +1,173 @@
+html {
+    scroll-behavior: smooth; /* Hace que el salto entre las secciones sea suave */
+    scroll-padding-top: 56px; /* Evita que el Navbar tape el inicio de las secciones */
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.tracking-wider {
+    letter-spacing: 2px;
+}
+
+#carruselPrincipal .carousel-item {
+    height: 75vh; /* El carrusel ocupa el 75% del alto de la pantalla */
+    min-height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* --- TRANSFORMACIONES 2D MODERNAS (EFECTOS HOVER) --- */
+
+.perfil-avatar {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.perfil-avatar:hover {
+    transform: scale(1.05) rotate(2deg); /* Escala y rota sutilmente con GPU */
+}
+
+.tarjeta-animada {
+    transition: translate 0.3s ease, box-shadow 0.3s ease;
+    will-change: translate; 
+}
+
+.tarjeta-animada:hover {
+    translate: 0 -10px; 
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.125) !important;
+}
+
+
+.footer-links a {
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #fff !important;
+    padding-left: 5px; /* Pequeño desplazamiento de texto al hacer hover */
+}
+
+/* --- CONFIGURACIÓN DE LA TARJETA DE PRESENTACIÓN 3D --- */
+
+.tarjeta-contenedor {
+    perspective: 1500px;
+    width: 450px;
+    height: 260px;
+    max-width: 90%; 
+}
+
+.tarjeta-interna {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d; /* Obliga a los hijos a mantener el espacio 3D */
+    cursor: pointer;
+}
+
+.tarjeta-contenedor:hover .tarjeta-interna {
+    transform: rotateY(180deg);
+}
+
+.tarjeta-frente, .tarjeta-atras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden; /* Esconde la cara que queda de espaldas al usuario */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tarjeta-frente {
+    background-color: #11141a;
+    z-index: 2; 
+}
+
+.tarjeta-atras {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+}
+
+.tracking-widest {
+    letter-spacing: 4px;
+}
+
+
+.tarjeta-frente, .tarjeta-atras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important; 
+    
+    transform-style: preserve-3d; 
+}
+
+.tarjeta-frente {
+    background-color: #11141a !important; /* Cambia a tu color oscuro preferido */
+    z-index: 2;
+    transform: rotateY(0deg); /* Asegura su posición inicial */
+}
+
+.tarjeta-atras {
+    background-color: #ffffff !important;
+    
+
+    transform: rotateY(180deg) translateZ(1px) !important;
+}
+
+/* --- CONFIGURACIÓN DE LA GALERÍA CON REJILLAS 
+
+.galeria-img-contenedor {
+    overflow: hidden;
+    position: relative;
+    background-color: #000; 
+}
+
+.galeria-img-contenedor img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    
+    transition: transform 0.5s ease;
+}
+
+.galeria-item:hover .galeria-img-contenedor img {
+    transform: scale(1.08); 
+}
+
+.galeria-item {
+    transition: box-shadow 0.3s ease;
+}
+
+.galeria-item:hover {
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.modal-backdrop.show {
+    opacity: 0.85 !important;
+}
+.image-zoom-effect {
+    animation: zoomSuave 0.3s ease-out;
+}
+
+@keyframes zoomSuave {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}--- */

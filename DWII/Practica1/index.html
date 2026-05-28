@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 1 - Mi Perfil Profesional</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Inicio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span> 
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Mi Tarjeta de presentación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+    <!-- Header / Hero Section -->
+    <header class="py-5 bg-white mb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Columna de Imagen -->
+                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                    <img src="images/picture.jpeg" class="rounded-circle img-fluid shadow foto-perfil" alt="Mi Foto">
+                </div>
+                <!-- Columna de Texto -->
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-3 fw-bold">Soy [Nombre del Alumno]</h1>
+                    <p class="lead mb-4">Especialista en Diseño Visual y Producción de Contenidos Digitales.</p>
+                    <a href="#proyectos" class="btn btn-diseno btn-lg">Explorar mis proyectos</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Proyectos (Grilla de Bootstrap) -->
+    <main class="container my-5 " id="proyectos ">
+
+    <div class="myacordeon">
+          <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="" class="d-block w-50" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/Img1.jpg" class="d-block w-50" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </div>
+    <div class="mis-habilidades">
+        <h2 class="text-center mb-5">Mis Habilidades</h2>
+        <div class="row g-4">
+            
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 custom-card p-3 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Diseño UI/UX</h5>
+                        <p class="card-text">Creación de interfaces funcionales y estéticas enfocadas en el usuario.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 custom-card p-3 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Video & Post</h5>
+                        <p class="card-text">Producción y edición de contenido audiovisual para redes sociales.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 custom-card p-3 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Estrategia Digital</h5>
+                        <p class="card-text">Planificación de contenidos basados en objetivos de comunicación.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="mi-experiencia">
+      
+        <h2 class="text-center mb-5">Mi Experiencia</h2>
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header mb-5">
+      <button class=" mb-5 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        linkedin.com/efloresgallegos
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+       
+
+    </main>
+
+    <!-- Footer Simple -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-0">&copy; 2026 - Diseño Web II para Productores de Contenido</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
