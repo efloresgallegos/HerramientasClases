@@ -53,8 +53,8 @@ html {
 
 .tarjeta-contenedor {
     perspective: 1500px;
-    width: 450px;
-    height: 260px;
+    width: 650px;
+    height: 460px;
     max-width: 90%; 
 }
 
@@ -69,7 +69,7 @@ html {
 }
 
 .tarjeta-contenedor:hover .tarjeta-interna {
-    transform: rotateY(180deg);
+    transform: rotateY(440deg);
 }
 
 .tarjeta-frente, .tarjeta-atras {
@@ -121,27 +121,30 @@ html {
     transform: rotateY(180deg) translateZ(1px) !important;
 }
 
-/* --- CONFIGURACIÓN DE LA GALERÍA CON REJILLAS 
 
+/* Agregar desde aquí */
 .galeria-img-contenedor {
     overflow: hidden;
     position: relative;
-    background-color: #000; 
+    background-color: #000; /* Fondo negro de respaldo mientras carga la imagen */
 }
 
+/* Forzar que todas las imágenes tengan exactamente la misma proporción visual */
 .galeria-img-contenedor img {
     aspect-ratio: 4 / 3;
     object-fit: cover;
     width: 100%;
     display: block;
     
+    /* Prepara la GPU para la animación del zoom */
     transition: transform 0.5s ease;
 }
 
 .galeria-item:hover .galeria-img-contenedor img {
-    transform: scale(1.08); 
+    transform: scale(1.08); /* Transformación 2D moderna acelerada por hardware */
 }
 
+/* Suavizado general para la elevación de la tarjeta completa */
 .galeria-item {
     transition: box-shadow 0.3s ease;
 }
@@ -150,13 +153,17 @@ html {
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15) !important;
 }
 
+/* Cambia el cursor a la manita de clic al pasar sobre la tarjeta */
 .cursor-pointer {
     cursor: pointer;
 }
 
+/* Hace que el fondo negro del modal sea un poco más denso y elegante */
 .modal-backdrop.show {
     opacity: 0.85 !important;
 }
+
+/* Transición suave para cuando la imagen se renderiza dentro del modal */
 .image-zoom-effect {
     animation: zoomSuave 0.3s ease-out;
 }
@@ -170,4 +177,4 @@ html {
         transform: scale(1);
         opacity: 1;
     }
-}--- */
+}

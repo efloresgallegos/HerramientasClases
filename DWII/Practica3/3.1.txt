@@ -1,0 +1,67 @@
+HTML 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container vh-100 d-flex flex-column justify-content-center align-items-center contenedor-interactivo">
+    
+    <div class="card p-4 shadow text-center tarjeta-diseno" style="width: 350px;">
+        <div class="card-body">
+            <h3 class="card-title fw-bold mb-3">Control de Capas</h3>
+            <p class="card-text text-muted mb-4">JavaScript puede alterar el diseño de esta página añadiendo o quitando clases en tiempo real.</p>
+            
+            <button id="botonInterruptor" class="btn btn-primary btn-lg rounded-pill px-4">
+                Prender Modo Oscuro
+            </button>
+        </div>
+    </div>
+    
+</div>
+JS
+
+// PASO 1: 
+const boton = document.querySelector('#botonInterruptor');
+const lienzo = document.querySelector('.contenedor-interactivo');
+
+// PASO 2:
+boton.addEventListener('click', function() {
+    
+    // PASO 3: 
+    lienzo.classList.toggle('modo-oscuro-activo');
+    
+    // PASO 4: 
+    if (lienzo.classList.contains('modo-oscuro-activo')) {
+        boton.textContent = "Apagar Modo Oscuro";
+        boton.className = "btn btn-light btn-lg rounded-pill px-4"; // Cambia el color del botón
+    } else {
+        boton.textContent = "Prender Modo Oscuro";
+        boton.className = "btn btn-primary btn-lg rounded-pill px-4";
+    }
+    
+});
+
+CSS
+
+.contenedor-interactivo {
+    transition: background-color 0.5s ease;
+}
+
+.tarjeta-diseno {
+    transition: transform 0.3s ease, background-color 0.5s ease;
+}
+
+.tarjeta-diseno:hover {
+    transform: scale(1.03); 
+}
+
+.modo-oscuro-activo {
+    background-color: #121212 !important;
+}
+
+.modo-oscuro-activo .tarjeta-diseno {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 1px solid #333;
+}
+
+.modo-oscuro-activo .text-muted {
+    color: #b0b0b0 !important; 
+}

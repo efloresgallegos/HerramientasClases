@@ -1,0 +1,89 @@
+HTML
+<div class="container py-5 d-flex flex-column align-items-center justify-content-center min-vh-100 bg-light">
+
+  <div id="lienzoTexto" class="p-5 bg-white shadow rounded-4 text-center mb-4 transition-all" style="width: 100%; max-width: 500px;">
+    <h1 id="textoPrincipal" class="fw-bold m-0 text-dark">DISEÑO</h1>
+  </div>
+
+  <div class="card p-4 shadow-sm" style="width: 100%; max-width: 500px;">
+    <div class="card-body">
+      <h5 class="card-title fw-bold text-secondary mb-4">// PANEL DE PROPIEDADES</h5>
+
+      <div class="mb-3">
+        <label class="form-label small fw-bold text-muted">Editar Texto</label>
+        <input type="text" id="inputTexto" class="form-control" value="DISEÑO">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label small fw-bold text-muted">Tamaño de Fuente</label>
+        <input type="range" id="sliderTamaño" class="form-range" min="20" max="80" value="48">
+      </div>
+
+      <div class="mb-2">
+        <label class="form-label small fw-bold text-muted">Color de Fondo</label>
+        <div class="d-flex gap-2">
+          <button class="btn btn-primary boton-color" data-color="#0d6efd">Azul</button>
+          <button class="btn btn-danger boton-color" data-color="#dc3545">Rojo</button>
+          <button class="btn btn-success boton-color" data-color="#198754">Verde</button>
+          <button class="btn btn-dark boton-color" data-color="#212529">Oscuro</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+CSS 
+#lienzoTexto {
+  transition: background-color 0.4s ease, color 0.3s ease;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#textoPrincipal {
+  transition: font-size 0.1s ease; 
+  word-break: break-word;
+}
+
+.boton-color {
+  transition: transform 0.2s ease;
+}
+.boton-color:hover {
+  transform: scale(1.1);
+}
+
+JS
+const lienzo = document.querySelector('#lienzoTexto');
+const texto = document.querySelector('#textoPrincipal');
+
+const inputTexto = document.querySelector('#inputTexto');
+const sliderTamaño = document.querySelector('#sliderTamaño');
+const botonesColor = document.querySelectorAll('.boton-color'); 
+
+
+inputTexto.addEventListener('input', function() {
+  texto.textContent = inputTexto.value.toUpperCase(); 
+});
+
+
+sliderTamaño.addEventListener('input', function() {
+  texto.style.fontSize = sliderTamaño.value + 'px';
+});
+
+
+botonesColor.forEach(function(boton) {
+  
+  boton.addEventListener('click', function() {
+    const codigoColor = boton.getAttribute('data-color');
+    
+    lienzo.style.setProperty('background-color', codigoColor, 'important');    
+    if (codigoColor === '#212529') {
+      texto.style.color = '#ffffff';
+    } else {
+      texto.style.color = '#212529';
+    }
+  });
+  
+});
